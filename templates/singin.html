@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Registro</title>
+</head>
+<body>
+    <main>
+        <form method="POST">
+            <h2>Registro</h2>
+
+            <label for="name">Cree un nombre de usuario</label><br>
+            <input type="text" name="name" id="name"><br>
+
+            <label for="password">Cree su contraseña</label><br>
+            <input type="password" name="password" id="password"><br>
+            <div class="password-adds" id="password-adds1">
+                <input type="checkbox" id="show-pass"><label for="show-pass">Mostrar contraseña</label>
+                <small id="password-sec"></small>
+            </div>
+
+            <label for="password2">Confirme su contraseña</label><br>
+            <input type="password" name="password2" id="password2">
+            <div class="password-adds">
+                <input type="checkbox" id="show-pass2"><label for="show-pass2">Mostrar contraseña</label>
+            </div>
+
+            <div class="buttons">
+                <button class="button-generic" type="submit">Enviar</button>
+                <a class="button-generic" href="{{ url_for('index') }}">Cancelar</a>
+            </div>
+            <div class="link">
+                <a class="link" href="{{ url_for('login') }}">Ya tengo cuenta iniciar sesión</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/login-singin.js') }}"></script>
+</body>
+</html>

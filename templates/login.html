@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <main>
+        <form method="POST">
+            <h2>Inicio de sesión</h2>
+
+            <label for="name">Ingrese su nombre de usuario</label><br>
+            <input type="text" name="name" id="name"><br>
+
+            <label for="password">Ingrese su contraseña</label><br>
+            <input type="password" name="password" id="password"><br>
+            <div class="password-adds">
+                <input type="checkbox" id="show-pass"><label for="show-pass">Mostrar contraseña</label>
+            </div>
+
+            <div class="buttons">
+                <button class="button-generic" type="button">Enviar</button>
+                <a class="button-generic" href="index.html">Cancelar</a>
+            </div>
+            <div class="link">
+                <a class="link" href="singin.html">No tengo cuenta registrarse</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
