@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-div">
+            <img src="" alt="Logo">
+            <div class="bar"></div>
+            <div class="bar bar2"></div>
+        </div>
+        <div class="links-nav">
+            <a href="{{ url_for('index') }}">Inicio</a>
+            {% if current_user.name %}
+                <a href="">{{ current_user.name }}</a>
+            {% endif %}
+            <a href=""></a>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="foot-element">
+            <h4>Equipo</h4>
+            <ul>
+                <h5>Integrantes</h5>
+                <li class="">André-Wireframe: Programador</li>
+                <li class="integrant">Juan Manuel: Diseñador</li>
+                <li class="integrant">Carlos Adrián Bernardo: Tester</li>
+                <li class="integrant">Santiago Estevez: BloodStike-Player</li>
+                <li class="integrant">Luis Hazel Medina: Documentador</li>
+            </ul>
+        </div>
+        <div class="foot-element">
+            <h4>Contacto</h4>
+            <ul>
+                <li class="links-nav"><a href="">Calendario</a></li>
+                <li class="links-nav"><a href="">Test vocacional</a></li>
+                <li class="links-nav"><a href="">GitHub</a></li>
+                <li class="links-nav"><a href="">GitHub de chago o Juan</a></li>
+            </ul>
+        </div>
+        <div class="foot-element foot-logo">
+            <img src="" alt="">
+            <h4>Cecytos Web Services</h4>
+            <small>&copy; copyright 2026</small>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/styles.css') }}"></script>
+</body>
+</html>

@@ -1,182 +1,138 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Cecytos Web Services</title>
-</head>
-<body>
-    <nav>
-        <div class="logo-div">
-            <img src="" alt="Logo">
-            <div class="bar"></div>
-            <div class="bar bar2"></div>
-        </div>
-        <div class="links-nav">
-            <a href="{{ url_for('index') }}">Inicio</a>
-            <a href=""></a>
-            <a href=""></a>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
-    <header>
-        <div class="hero">
-            <div class="hero-2">
-                <h1>Cecytos Web Services</h1>
-                <h2>Sistema de apoyo comunitario</h2>
-            </div>
-        </div>
-        <div class="carr-info-container">
-            <div class="carr-info">
-            <a target="_blank" href="https://google.com" id="dinamic-link" class="button-generic">Visitar</a>
-        </div>
-        <div class="carr-buttons-container">
-            <div class="carr-buttons">
-                <button class="carrusel-arrou" onclick="back_img()"><</button>
-                <div class="selected" id="cl1"></div>
-                <div class="selected" id="cl2"></div>
-                <div class="selected" id="cl3"></div>
-                <div class="selected" id="cl4"></div>
-                <div class="selected" id="cl5"></div>
-                <button class="carrusel-arrou" onclick="front_img()">></button>
-            </div>
-        </div>
-        <div class="rail">
-            <div class="carrusel" id="carrusel">
-                <div class="carr-item" id="img1">
+{% block title %}Cecytos Web Services{% endblock %}
 
-                </div>
-                <div class="carr-item" id="img2">
+{% block content %}
 
-                </div>
-                <div class="carr-item" id="img3">
+<header>
+    <div class="hero">
+        <div class="hero-2">
+            <h1>Cecytos Web Services</h1>
+            <h2>Sistema de apoyo comunitario</h2>
+        </div>
+    </div>
+    <div class="carr-info-container">
+        <div class="carr-info">
+        <a target="_blank" href="https://google.com" id="dinamic-link" class="button-generic">Visitar</a>
+    </div>
+    <div class="carr-buttons-container">
+        <div class="carr-buttons">
+            <button class="carrusel-arrou" onclick="back_img()"><</button>
+            <div class="selected" id="cl1"></div>
+            <div class="selected" id="cl2"></div>
+            <div class="selected" id="cl3"></div>
+            <div class="selected" id="cl4"></div>
+            <div class="selected" id="cl5"></div>
+            <button class="carrusel-arrou" onclick="front_img()">></button>
+        </div>
+    </div>
+    <div class="rail">
+        <div class="carrusel" id="carrusel">
+            <div class="carr-item" id="img1">
 
-                </div>
-                <div class="carr-item" id="img4">
+            </div>
+            <div class="carr-item" id="img2">
 
-                </div>
-                <div class="carr-item" id="img5">
+            </div>
+            <div class="carr-item" id="img3">
 
-                </div>
+            </div>
+            <div class="carr-item" id="img4">
+
+            </div>
+            <div class="carr-item" id="img5">
+
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <div class="about">
-            <div class="card-img">
-                <img src="" alt="">
-            </div>
-            <div class="card-text">
-                <h3>Quienes somos</h3>
-                <p>
-                    Somos una plataforma libre y gratuita de apoyo a personas en
-                    proceso de rehabilitación de sustancias adictivas como drogas y alcohol,
-                    en esta plataforma puedes encontrar material util para la correcta reintegración
-                    a la sociedad, como cursos, videos y talleres que mejoraran las
-                    habilidades sociales de estas personas.   
-                </p>
-            </div>
-        </div>
-        <div class="links">
-            <div class="card-link">
-                <img src="" alt="">
-                <h5>Link 1</h5>
-                <p>
-                    Link 1 sobre cursos y algo asi,
-                    no se que poner es un borrador
-                </p>
-                <a href="" class="button-generic">Ir</a>
-            </div>
-             <div class="card-link">
-                <img src="" alt="">
-                <h5>Link 2</h5>
-                <p>
-                    Link 2 sobre cursos y algo asi,
-                    no se que poner es un borrador
-                </p>
-                <a href="" class="button-generic">Ir</a>
-            </div>
-             <div class="card-link">
-                <img src="" alt="">
-                <h5>Link 3</h5>
-                <p>
-                    Link 3 sobre cursos y algo asi,
-                    no se que poner es un borrador
-                </p>
-                <a href="" class="button-generic">Ir</a>
-            </div>
-        </div>
-
-        <div class="extras">
-            <div class="dinamic-card">
-                <h5>Carta dinámica 1</h5>
-                <p>
-                    Esta es una carta dinamica muy exotica
-                    en la que andre en su infinita sabiduria
-                    un dia que estaba alucinando mucho se
-                    le ocurrio y dijo la voy a hacer y si
-                    estan viendo esto es que funciono y
-                    seguramente se ve muy pero muy exotico
-                    😊😊😊
-                </p>
-            </div>
-            <div class="dinamic-card">
-                <h5>Carta dinámica 2</h5>
-                <p>
-                    Esta es una carta dinamica muy exotica
-                    en la que andre en su infinita sabiduria
-                    un dia que estaba alucinando mucho se
-                    le ocurrio y dijo la voy a hacer y si
-                    estan viendo esto es que funciono y
-                    seguramente se ve muy pero muy exotico
-                    😊😊😊
-                </p>
-            </div>
-            <div class="dinamic-card">
-                <h5>Carta dinámica 3</h5>
-                <p>
-                    Esta es una carta dinamica muy exotica
-                    en la que andre en su infinita sabiduria
-                    un dia que estaba alucinando mucho se
-                    le ocurrio y dijo la voy a hacer y si
-                    estan viendo esto es que funciono y
-                    seguramente se ve muy pero muy exotico
-                    😊😊😊
-                </p>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="foot-element">
-            <h4>Equipo</h4>
-            <ul>
-                <h5>Integrantes</h5>
-                <li class="integrant">André-Wireframe: Programador</li>
-                <li class="integrant">Juan Manuel: Diseñador</li>
-                <li class="integrant">Carlos Adrián Bernardo: Tester</li>
-                <li class="integrant">Santiago Estevez: BloodStike-Player</li>
-                <li class="integrant">Luis Hazel Medina: Diseñador 2</li>
-            </ul>
-        </div>
-        <div class="foot-element">
-            <h4>Contacto</h4>
-            <ul>
-                <li class="links-nav"><a href="">Calendario</a></li>
-                <li class="links-nav"><a href="">Test vocacional</a></li>
-                <li class="links-nav"><a href="">GitHub</a></li>
-                <li class="links-nav"><a href="">GitHub de chago o Juan</a></li>
-            </ul>
-        </div>
-        <div class="foot-element foot-logo">
+<main>
+    <div class="about">
+        <div class="card-img">
             <img src="" alt="">
-            <h4>Cecytos Web Services</h4>
-            <small>&copy; copyright 2026</small>
         </div>
-    </footer>
+        <div class="card-text">
+            <h3>Quienes somos</h3>
+            <p>
+                Somos una plataforma libre y gratuita de apoyo a personas en
+                proceso de rehabilitación de sustancias adictivas como drogas y alcohol,
+                en esta plataforma puedes encontrar material util para la correcta reintegración
+                a la sociedad, como cursos, videos y talleres que mejoraran las
+                habilidades sociales de estas personas.   
+            </p>
+        </div>
+    </div>
+    <div class="links">
+        <div class="card-link">
+            <img src="" alt="">
+            <h5>Link 1</h5>
+            <p>
+                Link 1 sobre cursos y algo asi,
+                no se que poner es un borrador
+            </p>
+            <a href="" class="button-generic">Ir</a>
+        </div>
+            <div class="card-link">
+            <img src="" alt="">
+            <h5>Link 2</h5>
+            <p>
+                Link 2 sobre cursos y algo asi,
+                no se que poner es un borrador
+            </p>
+            <a href="" class="button-generic">Ir</a>
+        </div>
+            <div class="card-link">
+            <img src="" alt="">
+            <h5>Link 3</h5>
+            <p>
+                Link 3 sobre cursos y algo asi,
+                no se que poner es un borrador
+            </p>
+            <a href="" class="button-generic">Ir</a>
+        </div>
+    </div>
+
+    <div class="extras">
+        <div class="dinamic-card">
+            <h5>Carta dinámica 1</h5>
+            <p>
+                Esta es una carta dinamica muy exotica
+                en la que andre en su infinita sabiduria
+                un dia que estaba alucinando mucho se
+                le ocurrio y dijo la voy a hacer y si
+                estan viendo esto es que funciono y
+                seguramente se ve muy pero muy exotico
+                😊😊😊
+            </p>
+        </div>
+        <div class="dinamic-card">
+            <h5>Carta dinámica 2</h5>
+            <p>
+                Esta es una carta dinamica muy exotica
+                en la que andre en su infinita sabiduria
+                un dia que estaba alucinando mucho se
+                le ocurrio y dijo la voy a hacer y si
+                estan viendo esto es que funciono y
+                seguramente se ve muy pero muy exotico
+                😊😊😊
+            </p>
+        </div>
+        <div class="dinamic-card">
+            <h5>Carta dinámica 3</h5>
+            <p>
+                Esta es una carta dinamica muy exotica
+                en la que andre en su infinita sabiduria
+                un dia que estaba alucinando mucho se
+                le ocurrio y dijo la voy a hacer y si
+                estan viendo esto es que funciono y
+                seguramente se ve muy pero muy exotico
+                😊😊😊
+            </p>
+        </div>
+    </div>
+</main>
     
-    <script src="{{ url_for('static', filename='js/carrusel.js') }}"></script>
-</body>
-</html>
+<script src="{{ url_for('static', filename='js/carrusel.js') }}"></script>
+
+{% endblock %}
